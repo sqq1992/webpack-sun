@@ -1,7 +1,8 @@
 
-const child = require('./child')
+import child from './child.js'
 
-module.exports = {
+
+export default {
     msg: '我是parent的信息',
     child: child.msg
-}
+};

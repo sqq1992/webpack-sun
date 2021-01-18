@@ -5,5 +5,15 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: "bundle.js"
-    }
+    },
+
+
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                use: ["./lib/js-loader"],       //加载自定义loader
+            },
+        ],
+    },
 };

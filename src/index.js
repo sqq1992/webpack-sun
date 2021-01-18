@@ -1,5 +1,5 @@
 
-const parent = require('./parent')
+import parent from './parent.js'
 
 console.log(parent)
 
