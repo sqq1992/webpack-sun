@@ -1,1 +1,1 @@
-# webpack-sun 探索webpack内部机制
+# plugin分支, 探索webpack插件机制
