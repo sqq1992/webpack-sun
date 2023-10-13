@@ -1,17 +1,3 @@
-const path = require('path');
+const normalConfig = require('./webpackConigList/normal.config')
 
-module.exports = {
-    entry: './src/index.js',
-    output: {
-        path: path.join(__dirname, 'dist'),
-        filename: "bundle.js"
-    },
-    // module: {
-    //     rules: [
-    //         {
-    //             test: /\.js$/,
-    //             use: ["./lib/js-loader"],       //加载自定义loader
-    //         },
-    //     ],
-    // },
-};
+module.exports = normalConfig
