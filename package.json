@@ -1,18 +1,20 @@
 {
   "name": "webpack-sun",
   "version": "1.0.0",
-  "description": "",
+  "description": "## 1.如何借助 Babel+TS+ESLint 构建现代 JS 工程环境？normal.config.js (1).使用 resolve.extensions 声明自动解析 .ts 后缀文件，这意味着代码如 import \"./a.ts\" 可以忽略后缀声明，简化为 import \"./a\" 文件 (2).借助预处理器、PostCSS 等构建现代 CSS 工程环境 (3).使用 Webpack 构建 NPM Library 的正确方式(npm.config.js)",
   "main": "bin/webpack-theory.js",
-  "bin": "./bin/webpack-theory.js",
   "scripts": {
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:base": "webpack --config webpackConigList/base.config.js",
+    "build:normal": "webpack --config webpackConigList/normal.config.js",
+    "build:npm": "webpack --config webpackConigList/npm.config.js",
+    "build:source": "webpack --config webpackConigList/sourceWebpack.config.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sqq1992/webpack-sun.git"
   },
-  "author": "",
+  "author": "sun",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sqq1992/webpack-sun/issues"
@@ -22,6 +24,7 @@
     "lodash": "^4.17.21"
   },
   "dependencies": {
+    "@ali/legao-bundle-handler": "^2.1.51",
     "axios": "^1.5.1",
     "loader-utils": "^3.2.1",
     "react": "^18.2.0",
@@ -59,5 +62,8 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
     "webpack-node-externals": "^3.0.0"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
